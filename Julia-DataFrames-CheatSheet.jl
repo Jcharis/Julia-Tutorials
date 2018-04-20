@@ -9,8 +9,10 @@ df = readtable("dataset.csv") | From a CSV file
 df = readtable("dataset.tsv") | From a delimited text file (like TSV)
 df = readtable("dataset.txt", separator = '\t') | With a tab delimiter
 df = DataFrame(load("data.xlsx", "Sheet1")) | From an Excel file using FileIO,ExcelFiles
-df = readxl(DataFrame, "Filename.xlsx", "Sheet1!A1:C4") | From an Excel file using DataFrames,ExcelReaders
-df = readxlsheet(DataFrame, "Filename.xlsx", "Sheet1") |  From a whole sheet of Excel file using DataFrames,ExcelReaders
+df = readxl(DataFrame, "Filename.xlsx", "Sheet1!A1:C4") |  Returns all the data in the cell range A1 to C4 on Sheet1 using DataFrames,ExcelReaders
+df = readxl("testfileexcel.xlsx","Sheet1!A1:C4") |  Returns all the data in the cell range A1 to C4 on Sheet1 ExcelReaders
+df = readxlsheet("Filename.xlsx", "Sheet1") |  From a whole sheet of Excel file using DataFrames,ExcelReaders
+df = Taro.readxl("testfile.xlsx", "Sheet1", "B2:F10") | Using Taro
 #Read from a SQL table/database
 db = SQLite.connect("file.sqlite") # connection_object
 df = SQLite.query(db,"SELECT * FROM tables") | Read from a SQL table/database using SQLite and DataFrames
