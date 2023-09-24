@@ -1,0 +1,4 @@
+[deps]
+HTTP = "cd3eb016-35fb-5094-929b-558a96fad6f3"
+Mustache = "ffc61752-8dc7-55ee-8c37-f3e9cdd09e70"
+Oxygen = "df9a0d86-3283-4920-82dc-4555fc0d1d8b"
